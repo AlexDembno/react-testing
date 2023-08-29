@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/react-testing/static/css/main.7acaea2f.css",
-    "main.js": "/react-testing/static/js/main.07d3183d.js",
+    "main.js": "/react-testing/static/js/main.0dcf5789.js",
     "index.html": "/react-testing/index.html",
     "main.7acaea2f.css.map": "/react-testing/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-testing/static/js/main.07d3183d.js.map"
+    "main.0dcf5789.js.map": "/react-testing/static/js/main.0dcf5789.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.0dcf5789.js"
   ]
 }
