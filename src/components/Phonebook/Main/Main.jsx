@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 import Form from '../Form/Form';
@@ -13,9 +13,15 @@ const initialState = [
 ];
 
 const PhoneBook = () => {
-  const [contact, SetContact] = useState(initialState);
+  const [contact, SetContact] = useState(() => {
+    return JSON.parse(localStorage.getItem('contacts')) ?? initialState;
+  });
   const [filter, SetFilter] = useState('');
   const id = nanoid();
+
+  useEffect(() => {
+    localStorage.setItem('contacts', JSON.stringify(contact));
+  }, [contact]);
 
   const sabmitForm = evt => {
     evt.preventDefault();
