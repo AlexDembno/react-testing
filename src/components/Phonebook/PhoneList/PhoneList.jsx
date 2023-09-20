@@ -1,5 +1,6 @@
-const PhoneList = ({ contact, deleteContact }) => {
-  const list = contact.map(({ id, name, number }) => (
+const PhoneList = ({ contacts, deleteContact }) => {
+  console.log('contacts', contacts);
+  const list = contacts.map(({ id, name, number }) => (
     <li key={id}>
       <p>{name}</p>
       <p>{number}</p>
