@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts, addContacts } from '../redux/operations';
+import {
+  fetchContacts,
+  addContacts,
+  deleteContacts,
+} from '../redux/operations';
 
 import { filterContact } from '../redux/filterSlice';
 
@@ -14,6 +18,7 @@ const PhoneBook = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getfilter);
   const { items, isLoading, error } = useSelector(getContacts);
+  console.log('items', items);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -23,16 +28,14 @@ const PhoneBook = () => {
     evt.preventDefault();
     const name = evt.currentTarget.elements.name.value;
     const number = evt.currentTarget.elements.number.value;
-    // const result = items.some(el =>
-    //   el.name.toLowerCase().includes(name.toLowerCase())
-    // );
-    // if (result) {
-    //   evt.currentTarget.reset();
-    //   return alert(`${name} is already in contacts`);
-    // }
-    console.log('name', name);
-    console.log('number', number);
-    dispatch(addContacts(name, number));
+    const result = items.some(el =>
+      el.name.toLowerCase().includes(name.toLowerCase())
+    );
+    if (result) {
+      evt.currentTarget.reset();
+      return alert(`${name} is already in contacts`);
+    }
+    dispatch(addContacts({ name, number }));
 
     evt.currentTarget.reset();
   };
@@ -55,7 +58,8 @@ const PhoneBook = () => {
   };
 
   const deleteContact = id => {
-    // dispatch(deleteContacts(id));
+    console.log('id', id);
+    dispatch(deleteContacts(id));
   };
 
   return (
