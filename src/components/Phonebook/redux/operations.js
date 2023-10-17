@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import instans from 'shared/services/mockapi-API';
+import instans from 'shared/services/heroku-API';
 
 export const fetchContacts = createAsyncThunk(
   'contacts/getAll',

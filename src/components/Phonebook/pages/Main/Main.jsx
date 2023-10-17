@@ -4,15 +4,15 @@ import {
   fetchContacts,
   addContacts,
   deleteContacts,
-} from '../redux/operations';
+} from '../../redux/operations';
 
-import { filterContact } from '../redux/filterSlice';
+import { filterContact } from '../../redux/filterSlice';
 
-import { getContacts, getfilter } from '../redux/selectors';
+import { getContacts, getfilter } from '../../redux/selectors';
 
-import Form from '../Form/Form';
-import Filter from '../Filter/Filter';
-import PhoneList from '../PhoneList/PhoneList';
+import Form from '../../componentsPB/Form/Form';
+import Filter from '../../componentsPB/Filter/Filter';
+import PhoneList from '../../componentsPB/PhoneList/PhoneList';
 
 const PhoneBook = () => {
   const dispatch = useDispatch();

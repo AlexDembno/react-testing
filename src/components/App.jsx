@@ -1,9 +1,9 @@
-import PhoneBook from './Phonebook/Main/Main';
+import PhoneBookRoutes from './Phonebook/componentsPB/Routes/Routes';
 
 export const App = () => {
   return (
     <div>
-      <PhoneBook />
+      <PhoneBookRoutes />
     </div>
   );
 };
