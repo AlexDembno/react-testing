@@ -14,6 +14,7 @@ const RegisterForm = ({ onSubmit }) => {
 
   return (
     <>
+      <h1>Register</h1>
       <form onSubmit={sabmitForm}>
         <Input
           value={state.name}

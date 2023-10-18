@@ -7,15 +7,6 @@
   padding-bottom: 35px;
 }
 
-.container .label {
-  font-size: 15px;
-  padding-left: 10px;
-  position: absolute;
-  top: 13px;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
 .span {
   color: rgba(0, 0, 0, 1);
 }
@@ -27,7 +18,7 @@
   outline: none;
   padding: 0px 7px;
   border-radius: 6px;
-  color: #fff;
+  color: #0f0f0f;
   font-size: 15px;
   background-color: transparent;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
@@ -36,7 +27,7 @@
 
 .input:focus {
   border: 2px solid transparent;
-  color: #fff;
+  color: #030303;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 1),
     -1px -1px 6px rgba(255, 255, 255, 0.4), inset 3px 3px 10px rgba(0, 0, 0, 1),
     inset -1px -1px 6px rgba(255, 255, 255, 0.4);

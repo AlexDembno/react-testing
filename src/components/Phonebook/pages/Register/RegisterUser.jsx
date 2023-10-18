@@ -3,10 +3,13 @@ import RegisterForm from 'components/Phonebook/componentsPB/RegisterForm/Registe
 import styles from './RegisterUser.module.css';
 
 const Register = () => {
+  const onSubmit = state => {
+    console.log('state', state);
+  };
   return (
     <>
       <h1>Register</h1>
-      <RegisterForm />
+      <RegisterForm onSubmit={onSubmit} />
     </>
   );
 };

@@ -4,9 +4,9 @@ import useForm from 'shared/components/useForm/useForm';
 import fields from './fields';
 import { initiaState } from './initialState';
 
-import styles from './RegisterForm.module.css';
+import styles from './LoginForm.module.css';
 
-const RegisterForm = ({ onSubmit }) => {
+const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, sabmitForm } = useForm({
     initiaState,
     onSubmit,
@@ -15,11 +15,6 @@ const RegisterForm = ({ onSubmit }) => {
   return (
     <>
       <form onSubmit={sabmitForm}>
-        <Input
-          value={state.name}
-          handleChange={handleChange}
-          {...fields.name}
-        />
         <Input
           value={state.email}
           handleChange={handleChange}
@@ -38,4 +33,4 @@ const RegisterForm = ({ onSubmit }) => {
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
