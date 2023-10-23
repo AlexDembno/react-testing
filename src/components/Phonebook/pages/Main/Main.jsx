@@ -4,11 +4,11 @@ import {
   fetchContacts,
   addContacts,
   deleteContacts,
-} from '../../redux/operations';
+} from '../../redux/contactRedax/operations';
 
-import { filterContact } from '../../redux/filterSlice';
+import { filterContact } from '../../redux/contactRedax/filterSlice';
 
-import { getContacts, getfilter } from '../../redux/selectors';
+import { getContacts, getfilter } from '../../redux/contactRedax/selectors';
 
 import Form from '../../componentsPB/Form/Form';
 import Filter from '../../componentsPB/Filter/Filter';
