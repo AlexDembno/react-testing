@@ -18,7 +18,6 @@ const PhoneBook = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getfilter);
   const { items, isLoading, error } = useSelector(getContacts);
-  console.log('items', items);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -58,7 +57,6 @@ const PhoneBook = () => {
   };
 
   const deleteContact = id => {
-    console.log('id', id);
     dispatch(deleteContacts(id));
   };
 
